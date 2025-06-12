@@ -22,7 +22,8 @@ test("La funzione isPalindrome verifica se una stringa è un palindromo." , () =
 })
 
 test("La funzione createSlug lancia un errore se il titolo è vuoto o non valido." , () => {
-  
+  expect(() => createSlag("")).toThrow("Il titolo non può essere vuoto");
+  expect(() => createSlag(null)).toThrow("Il titolo non può essere vuoto");
 })
 
 test("La funzione findPostById restituisce il post corretto dato l’array di post e l’id", () => {

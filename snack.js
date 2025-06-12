@@ -5,6 +5,9 @@ function getInitials(nomeCompleto) {
 }
 
 function createSlag(titolo) {
+  if(!titolo){
+    throw new Error("Il titolo non può essere vuoto");
+  }
   return titolo.toLowerCase().replaceAll(" ", "-");
 }
 
