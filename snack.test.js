@@ -1,17 +1,23 @@
-const { getInitials } = require("./snack.js");
+const { getInitials, createSlag } = require("./snack.js");
 
 test ("La funzione getInitials restituisce le iniziali di un nome completo.", () => {
   expect(getInitials("Mario Rossi")).toBe("M.R.");
 });
 
-
-
 test ("La funzione createSlug restituisce una stringa in lowercase.", () => {
-  expect(createSlag("Titolo CON Maiuscole")).toBe("titolo-con-maiuscole");
+  expect(createSlag("Titolo CON Maiuscole")).toBe("titolo con maiuscole");
 });
 
-test("La funzione average calcola la media aritmetica di un array di numeri." , () => {
+function avarage(numeri){
+  let somma = 0;
+  numeri.forEach(numero => {
+    somma += numero;
+  });
+  return somma / numeri.length;
+}
 
+test("La funzione average calcola la media aritmetica di un array di numeri." , () => {
+  expect(avarage([5, 15])).toBe(10)
 })
 
 test("La funzione createSlug sostituisce gli spazi con -." , () => {
