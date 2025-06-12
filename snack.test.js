@@ -5,7 +5,7 @@ test ("La funzione getInitials restituisce le iniziali di un nome completo.", ()
 });
 
 test ("La funzione createSlug restituisce una stringa in lowercase.", () => {
-  expect(createSlag("Titolo CON Maiuscole")).toBe("titolo con maiuscole");
+  expect(createSlag("Titolo CON Maiuscole")).toBe("titolo-con-maiuscole");
 });
 
 test("La funzione average calcola la media aritmetica di un array di numeri." , () => {
@@ -13,7 +13,7 @@ test("La funzione average calcola la media aritmetica di un array di numeri." , 
 })
 
 test("La funzione createSlug sostituisce gli spazi con -." , () => {
-  
+  expect(createSlag("Titolo con spazi")).toBe("titolo-con-spazi");
 })
 
 test("La funzione isPalindrome verifica se una stringa è un palindromo." , () => {

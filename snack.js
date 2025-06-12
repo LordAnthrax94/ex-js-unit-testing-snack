@@ -5,7 +5,7 @@ function getInitials(nomeCompleto) {
 }
 
 function createSlag(titolo) {
-  return titolo.toLowerCase()
+  return titolo.toLowerCase().replaceAll(" ", "-");
 }
 
 function avarage(numeri){
