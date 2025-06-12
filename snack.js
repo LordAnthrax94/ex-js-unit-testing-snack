@@ -8,8 +8,17 @@ function createSlag(titolo) {
   return titolo.toLowerCase()
 }
 
+function avarage(numeri){
+  let somma = 0;
+  numeri.forEach(numero => {
+    somma += numero;
+  });
+  return somma / numeri.length;
+}
+
 module.exports = {
   getInitials,
-  createSlag
+  createSlag,
+  avarage
 
 }
