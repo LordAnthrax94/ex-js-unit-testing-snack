@@ -16,9 +16,16 @@ function avarage(numeri){
   return somma / numeri.length;
 }
 
+function isPalindrome(parola){
+  const parolaInvertita = parola.split("").reverse().join("");
+  return parola === parolaInvertita;
+}
+
+
 module.exports = {
   getInitials,
   createSlag,
-  avarage
+  avarage,
+  isPalindrome
 
 }
