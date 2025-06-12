@@ -24,11 +24,27 @@ function isPalindrome(parola){
   return parola === parolaInvertita;
 }
 
+function findPostById(posts, id) {
+  if(isNaN(id)){
+    throw new Error(`"${id}" non è un ID valido`);
+  }
+  posts.forEach(post => {
+    if(
+      post.id === undefined ||
+      post.title === undefined ||
+      post.slug === undefined 
+    ){
+      throw new Error("L'array di post non è valido");
+    }
+  })
+  return posts.find(post => post.id === id) || null;  
+}
+
 
 module.exports = {
   getInitials,
   createSlag,
   avarage,
-  isPalindrome
-
+  isPalindrome,
+  findPostById
 }
